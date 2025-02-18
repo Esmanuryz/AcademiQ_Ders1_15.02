@@ -17,24 +17,26 @@ class HelloWorld
         //char[] sifre_elemanlari = sifre.ToCharArray();
 
         // sifre uzunlugu kontrolu
+
         if (sifre.Length >= 8)
         {
             bool buyukHarf_check = false;
                 foreach (char i in sifre)
             {
 
-                if (!char.IsUpper(i)) // buyuk harf kontrolu
+                if (char.IsUpper(i)) // buyuk harf kontrolu
                 {
                     buyukHarf_check = true;
                     break; // buyuk harf buldugunda donguden cik
                 }
             }
 
+           
+
+
             if (buyukHarf_check)
             {
-
                 bool ozel_karakter = false;
-                
                 foreach (char i in sifre)
                 {
 
